@@ -1,21 +1,21 @@
 (function(){
 
   // ---- placeholder data — swap in real memories later ----
+
+//   \u2019 for 's
   var memories = [
-    { date: '2013-06-14', title: 'Learned to ride a bike in the cul-de-sac' },
-    { date: '2014-08-02', title: 'First week at the new school' },
-    { date: '2015-12-24', title: 'Snowed in at grandma\u2019s house' },
-    { date: '2016-03-11', title: 'Moved into the apartment on Pike Street' },
-    { date: '2016-07-19', title: 'Road trip down the coast with no real plan' },
-    { date: '2017-05-06', title: 'Adopted a very opinionated cat' },
-    { date: '2018-09-23', title: 'Graduation, and the party that followed' },
-    { date: '2019-01-15', title: 'Started the job that changed everything' },
-    { date: '2020-04-02', title: 'Learned to bake bread, like everyone else' },
-    { date: '2021-11-08', title: 'First apartment that was truly ours' },
-    { date: '2022-06-30', title: 'Wedding in the backyard, rain and all' },
-    { date: '2023-02-14', title: 'A quiet winter, mostly spent reading' },
-    { date: '2024-08-19', title: 'Drove across three states to see the eclipse' },
-    { date: '2025-10-01', title: 'The trip we almost didn\u2019t take' }
+    { date: '2015-12-24', title: 'Snowed in at grandmas house' },
+    { date: '2022-09-03', title: 'Moving in to UBC' },
+    { date: '2022-09-29', title: 'First Site Visit to Wesbrook Mall' },
+    { date: '2022-10-19', title: 'Site Visits at UBC' },
+    { date: '2022-12-01', title: 'Richmond w/ Friends' },
+    { date: '2023-03-08', title: 'Wreck Beach w/ Friends' },
+    { date: '2023-06-25', title: 'Hiking Mt Seymour' },
+    { date: '2023-08-13', title: 'Visiting Hong Kong' },
+    { date: '2023-09-06', title: 'Return to UBC' },
+    { date: '2023-11-14', title: 'Sunshine Coast w/ Dad' },
+    { date: '2024-02-05', title: 'UBC Sunset' },
+    { date: '2026-09-12', title: 'Alaska Cruise' },
   ];
 
   var MIN_GAP = 110;      // minimum px between two neighboring nodes
@@ -231,6 +231,7 @@
     if (Math.abs(targetOffset - currentOffset) < 0.05) currentOffset = targetOffset;
 
     track.style.transform = 'translateX(' + (-currentOffset) + 'px)';
+    ticks.style.backgroundPosition = (-currentOffset) + 'px 0';
 
     var nearest = findNearest(currentOffset);
     setActive(nearest);
